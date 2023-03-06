@@ -1,11 +1,23 @@
-import React from "react";
-import Form from "../components/form";
+import React from 'react';
 
-const About = () => {
+//ES6
+const App = () => {
     return(
-        <div>This is a About Page
-            <Form/>
+        <div>
+
+            <h1>This is a About Page</h1>
         </div>
     )
 }
-export default About;
+
+
+
+// ES5 syntax
+// function About(){
+//     return(
+//         <div>
+//             <h1>This is a About Page</h1>
+//         </div>
+//     )
+// }
+export default App;
