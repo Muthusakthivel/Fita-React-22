@@ -27,7 +27,7 @@ const Form = () => {
     }
     const handleIfElseRendering = () => {
          let condition = !ifElseCondition;
-        //  alert(condition);
+         alert(condition);
         setIfElseCondition(condition);
     }   
     
@@ -89,8 +89,6 @@ const Form = () => {
                 {ifElseCondition ? <img src='https://img.freepik.com/free-vector/realistic-light-bulb-with-electricity_23-2149129410.jpg?w=2000' alt="" style={{"width" : "100px"}}/> 
                 :
                 <img src='https://thumbs.dreamstime.com/b/light-bulb-11371329.jpg' alt="" style={{"width" : "100px"}}/> }
-                
-                
             </div>
         </div>
      </div>
