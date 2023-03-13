@@ -27,7 +27,7 @@ const Form = () => {
     }
     const handleIfElseRendering = () => {
          let condition = !ifElseCondition;
-         alert(condition);
+
         setIfElseCondition(condition);
     }   
     
