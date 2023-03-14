@@ -21,6 +21,7 @@ const RegisterPage = () => {
         addresses: false,
         qualification: false,
     })
+    let [accountList, setAccountList] = useState([]);
     const submitRegister = () => {
         console.log(registerForm);
         setFormError({
@@ -33,6 +34,7 @@ const RegisterPage = () => {
             addresses: registerForm.addresses === "" ? true : false,
             qualification: registerForm.qualification === "" ? true : false
         })
+        setAccountList([...accountList, registerForm]);
     }
     const handleFormInput = (event) => {
         if(event.target.name === 'hobbies'){
@@ -91,7 +93,6 @@ const RegisterPage = () => {
             <div className="space">
                 <label className='register-label'>Enter Your Address:</label>
                 <textarea placeholder="Enter Your Address" className="register-input" onChange={handleFormInput} name="address"/>
-                {formError.addresses && <p className="error">Please enter a your address</p>}
             </div>
             <div className="space">
                 <label className='register-label'>Select Your Qualification :</label>
@@ -105,6 +106,38 @@ const RegisterPage = () => {
             </div>
             <div className="space">
                 <button onClick={() => submitRegister()}>Create Your Account</button>
+            </div>
+            <div style={{"height" : "600"}}>
+                <table id="customers">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email ID</th>
+                            <th>Date of Birth</th>
+                            <th>Gender</th>
+                            <th>Hobbies</th>
+                            <th>Address</th>
+                            <th>Qualification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            accountList?.map((value, index) => {
+                                return(
+                                    <tr key={index}>
+                                        <td>{value.userName}</td>
+                                        <td>{value.emailId}</td>
+                                        <td>{value.dateOfBirth}</td>
+                                        <td>{value.gender}</td>
+                                        <td>{value.hobbies}</td>
+                                        <td>{value.address}</td>
+                                        <td>{value.qualification}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table>
             </div>
         </div>
     )
