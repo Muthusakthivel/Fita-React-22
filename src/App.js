@@ -10,6 +10,7 @@ import MailPage from './pages/mail';
 import InboxPage from './pages/inbox';
 import SentPage from './pages/sent';
 import TrashPage from './pages/trash';
+import User from './pages/user';
 
 // ES6
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='trash' element={<TrashPage/>}></Route>
       </Route>
       <Route path='register' element={<RegisterPage/>}></Route>
+      <Route path='user' element={<User/>}></Route>
     </Routes>
     </BrowserRouter>
   )
