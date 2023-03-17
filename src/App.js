@@ -11,6 +11,7 @@ import InboxPage from './pages/inbox';
 import SentPage from './pages/sent';
 import TrashPage from './pages/trash';
 import User from './pages/user';
+import AccountCreatePage from './pages/account-create';
 
 // ES6
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route path='inbox' element={<InboxPage/>}></Route>
         <Route path='sent' element={<SentPage/>}></Route>
         <Route path='trash' element={<TrashPage/>}></Route>
+        <Route path='account' element={<AccountCreatePage />}></Route>
       </Route>
       <Route path='register' element={<RegisterPage/>}></Route>
       <Route path='user' element={<User/>}></Route>
