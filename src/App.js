@@ -14,6 +14,8 @@ import User from './pages/user';
 import UpdateUser from './pages/update-users';
 import AccountCreatePage from './pages/account-create';
 import SimpleForm from './components/simple-form';
+import ParentPage from './pages/parent';
+import ChildPage from './pages/child';
 
 // ES6
 const App = () => {
@@ -34,6 +36,8 @@ const App = () => {
       <Route path='register' element={<RegisterPage/>}></Route>
       <Route path='user' element={<User/>}></Route>
       <Route path='simpleform' element={<SimpleForm/>}></Route>
+      <Route path='parent' element={<ParentPage />}></Route>
+      <Route path='child' element={<ChildPage />}></Route>
     </Routes>
     </BrowserRouter>
   )
