@@ -37,6 +37,8 @@ const RegisterPage = () => {
         setAccountList([...accountList, registerForm]);
     }
     const handleFormInput = (event) => {
+        console.log(event.target.checked)
+        console.log(registerForm.hobbies.indexOf(event.target.value))
         if(event.target.name === 'hobbies'){
             if(event.target.checked){
                 registerForm.hobbies.push(event.target.value)               
@@ -49,7 +51,6 @@ const RegisterPage = () => {
         }else{
             setRegisterForm({...registerForm,[event.target.name] : event.target.value})
         }
-       
     }
     return(
         <div>

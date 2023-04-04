@@ -11,7 +11,7 @@ const SimpleForm = () => {
 
     const handleInput = (event) => {
         setLoginForm({...loginForm, [event.target.name] : event.target.value});
-        console.log(event.target.value);
+        console.log({[event.target.name] : event.target.value});
     }
     const submitUser = () => {
         console.log(loginForm);
@@ -21,11 +21,11 @@ const SimpleForm = () => {
             <h2>Simple Form</h2>
             <div className="space">
             <label className="label">Enter Your Email ID</label>
-            <input type='email' placeholder='Enter your email' name="email" id="username"  onChange={handleInput} />
+            <input type='email' placeholder='Enter your email' name="email"  onChange={handleInput} />
         </div>
         <div className="space">
             <label className="label">Enter Your Password</label>
-            <input type={"password"}  placeholder='Enter your Password'id="password" name="password" onChange={handleInput}/>
+            <input type={"password"}  placeholder='Enter your Password' name="password" onChange={handleInput}/>
             </div>
             <div className="space">
             <button onClick={() => submitUser()}>Submit Form</button>
